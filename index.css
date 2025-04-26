@@ -21,7 +21,7 @@ index.css
 
 @font-face {
     font-family: 'Krona One';
-    src: url('../assets/fonts/KronaOne-Regular.ttf') format('truetype');
+    src: url('assets/fonts/KronaOne-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
