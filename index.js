@@ -138,3 +138,26 @@ closeBtn.addEventListener('click', () => {
     openBtn.style.display = 'block';
     closeBtn.style.display = 'none';
 });
+
+// ---- Carga más lenta del Mapa ----
+
+// Cuando la web termine de cargar 
+document.addEventListener("DOMContentLoaded", function () {
+
+    //  selecciono el contenedor del mapa
+  const mapContainer = document.querySelector('.Location-map-container');
+    //  selecciono el iframe del mapa
+  const iframe = mapContainer.querySelector('.Location-map');
+    //  selecciono el mensaje de cargando mapa...
+  const loadingMessage = mapContainer.querySelector('.loading-message');
+
+// Cuando termina de cargar el iframe o mientras carga,
+  //  el mensaje se oculta (none)
+  if (iframe.complete) {
+    loadingMessage.style.display = 'none';
+  } else {
+    iframe.addEventListener('load', function () {
+      loadingMessage.style.display = 'none';
+    });
+  }
+});
