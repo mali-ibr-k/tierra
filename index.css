@@ -1,0 +1,1022 @@
+/*
+index.css
+  Estructura
+     - Reset / normalizar
+     - Variables
+     - Header
+     - Main
+     - Footer
+     - Media queries
+*/
+
+
+/* Inicio RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Krona One';
+    src: url('../assets/fonts/KronaOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('../assets/fonts/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    font-size: 100%;
+}
+
+body {
+    background-color: var(--c-bg);
+    font-family: 'Krona One', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+h5 {
+    font-size: 1.1em;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    display: inline;
+    text-decoration: underline;
+
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+
+}
+
+p {
+    font-family: 'Outfit';
+    margin: 1rem 0;
+    font-size: 1.3em;
+    line-height: 1.3em;
+}
+
+img,
+picture,
+video,
+iframe,
+svg {
+    display: block;
+    width: 100%;
+}
+
+svg {
+    color: currentColor;
+}
+
+
+form,
+input,
+label,
+select,
+option,
+textarea,
+button {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    display: block;
+    width: 100%;
+    background-color: transparent;
+}
+
+/* Fin RESET */
+
+/* Variables */
+:root {
+    /* Color principal de la web, predominante */
+    --c-primary: rgb(255, 208, 131); 
+
+    /* Color para tipografías y detalles en gris oscuro */
+    --c-secundary:  rgb(43, 43, 43);
+
+    /* color del fondo */
+    --c-bg: rgb(255, 250, 231)
+}
+
+
+/* Inicio Header / Encabezado
+    Estructura:
+       - Header
+       - Header-wrapper
+       - Header-btn
+       - Header-menu / Header-close
+       - Header-ul
+       - Header-link
+*/
+
+.Header {
+    width: 98%;
+    background-color: var(--c-bg);
+    margin: .5rem auto;
+    padding: 1.5rem 3rem;
+
+    border-radius: 48px;
+
+    position: absolute;
+    top: 0;
+    left: 1%;
+    z-index: 2;
+
+}
+
+.Header-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header-btn {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* Para el botón de cerrar y abrir del menú en responsive */
+.Header-menu,
+.Header-close {
+    display: none;
+}
+
+.Header-ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 2rem;
+}
+
+
+.Header-link::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: var(--c-secundary);
+    margin: .4rem 0 0;
+    transition: width .5s ease;
+}
+
+.Header-link:hover::after {
+    width: 100%;
+}
+
+/* Inicio MAIN */
+
+/* Inicio Banner:
+      Estructura:
+       - Banner
+       - Banner-color
+       - Banner-h2
+       - Banner-marquee
+       - Marquee-slide
+       - Marquee-img
+*/
+
+.Banner {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+
+    background-image: url(../assets/img/banner-imagen-peq.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Para que la imagen del banner tenga el tono naranja */
+.Banner-color {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(231, 140, 80);
+    opacity: 0.25;
+
+    position: absolute;
+    top: 0;
+}
+
+.Banner-h2 {
+    max-width: 60%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.Banner-marquee {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Marquesina decorativa */
+.Marquee-slide {
+    width: 200%;
+    background-color: var(--c-primary);
+    padding: 0.5rem;
+
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+
+    animation: slide 15s linear infinite;
+}
+
+/* Animación marquesina */
+@keyframes slide {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.Marquee-img {
+    width: 2rem;
+}
+
+
+
+/* Inicio "Sobre el evento" (About):
+      Estructura:
+       - About
+       - About-h3
+       - About-grid
+       - About-info
+       - About-button
+       - About-images
+       - About-img
+       - About-illustration
+        */
+
+.About {
+    width: 100%;
+    margin: 2rem auto;
+    padding: 5rem 4rem;
+}
+
+
+.About-h3 {
+    padding: 0 0 1rem;
+    margin: 0 0 1rem;
+
+}
+
+.About-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.About-info {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.About-button {
+    padding: 1rem;
+    margin: 1rem 0 0;
+    background-color: var(--c-primary);
+    border-radius: 2rem;
+
+    transition: background-color .5s;
+}
+
+.About-button:hover {
+    background-color: rgba(255, 207, 131, 0.57);
+    color: var(--c-secundary);
+}
+
+.About-images {
+    position: relative;
+}
+
+.About-img {
+    min-height: 200px;
+    border-radius: 2rem;
+}
+
+
+.About-illustration {
+    position: absolute;
+    width: 50%;
+}
+
+
+/* Animaciones de ilustraciones */
+
+@keyframes move {
+    from {
+        transform: translateX(45%);
+    }
+
+    to {
+        transform: translateY(40%);
+    }
+}
+
+@keyframes up {
+    from {
+        transform: translateX(70%);
+    }
+
+    to {
+        transform: translateY(-90%);
+    }
+}
+
+@keyframes side {
+    from {
+        transform: translateX(60%);
+    }
+
+    to {
+        transform: translateY(10%);
+    }
+}
+
+
+/* ilustraciones de decoración */
+.Img-fly {
+    top: 25%;
+    left: -25%;
+    animation: move 10s 1s infinite alternate ease-in-out both;
+
+}
+
+.Img-butterfly {
+    bottom: 15%;
+    right: 60%;
+    animation: up 10s 1s infinite alternate ease-in-out both;
+}
+
+.Img-ladybug {
+    top: 65%;
+    left: -30%;
+    animation: side 10s 1s infinite alternate ease-in-out both;
+
+}
+
+.Img-bug {
+    bottom: -20%;
+    animation: up 10s 1s infinite alternate ease-in-out both;
+}
+
+
+/* Inicio Artistas
+    Estructura:
+       - Artists
+       - Artists-h4
+       - Artists-grid
+       - Artist-left
+       - Artist-right
+       - Artist-h5
+       - Star
+       - Star-img
+       */
+
+.Artists {
+    width: 100%;
+    padding: 5rem 0 2rem 0;
+}
+
+.Artists-h4 {
+    padding: 1rem 0 1rem;
+    margin: 0 0 1rem;
+}
+
+.Artists-grid {
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.Artist-left {
+    text-align: left;
+}
+
+.Artist-right {
+    text-align: right;
+}
+
+.Artist-h5 {
+    padding: 0 0 1rem;
+}
+
+/* Ilustración de decoración */
+.Star {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Star-img {
+    width: 40px;
+}
+
+
+/* Inicio Proyectos
+    Estructura:
+       - Projects
+       - Projects-h4
+       - Projects-wrapper
+       - Projects-carrousel
+       - Projects-img
+       - Carrousel-arrow
+        */
+
+.Projects {
+    max-width: 100%;
+    margin: 2rem auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.Projects-h4 {
+    padding: 3rem 0 1rem;
+    margin: 3rem 0 1rem;
+}
+
+.Projects-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.Projects-carrousel {
+    width: 200%;
+    padding: 1rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    transition: transform 1s ease;
+    transform: translateX(-33%);
+    gap: 1rem;
+}
+
+.Projects-img {
+    width: 100%;
+
+    min-width: 150px;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.Carrousel-arrow {
+    background-color: rgba(255, 207, 131, 0.781);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 5rem;
+    position: absolute;
+    top: 55%;
+
+    transition: background-color .5s;
+    cursor: pointer;
+    gap: 1rem;
+
+}
+
+.Carrousel-arrow:hover {
+    background-color:var(--c-primary);
+    color: var(--c-secundary);
+}
+
+.Siguiente {
+    right: 0;
+}
+
+.Anterior {
+    left: 0;
+}
+
+
+/* inicio "El lugar"
+    Estructura:
+       - Place
+       - Place-h3
+       - Place-grid
+       - Place-info
+       - Place-p
+       - Place-illustr
+       - Place-video
+*/
+
+.Place {
+    width: 100%;
+    margin: 1rem auto;
+    padding: 2rem 4rem;
+}
+
+
+.Place-h3 {
+    padding: 0 0 1rem;
+    margin: 0 0 1rem;
+}
+
+.Place-grid {
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.Place-info {
+    position: relative;
+}
+
+.Place-p {
+    text-align: right;
+}
+
+.Place-illustr {
+    position: absolute;
+    width: 20%;
+    top: 65%;
+    left: 4%;
+}
+
+.Place-video {
+    width: 100%;
+    object-fit: cover;
+
+    border-radius: 2rem;
+}
+
+/* Inicio "Cómo llegar" 
+    Estructura:
+       - Location
+       - Location-h4
+       - Location-grid
+       - Location-p
+       - Location-illustr
+       - Location-map
+*/
+
+.Location {
+    width: 100%;
+    padding: 4rem 0 2rem 0;
+}
+
+.Location-h4 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    padding: 0 0 1rem;
+    margin: 0 0 1rem;
+}
+
+.Location-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    position: relative;
+}
+
+.Location-p {
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.Location-illustr {
+    position: absolute;
+    width: 8%;
+    left: 40%;
+    top: 90%;
+
+}
+
+.Location-map {
+    border: 1px solid var(--c-primary);
+    border-radius: 2rem;
+}
+
+/* Inicio "Reservas" 
+    Estructura:
+       - Booking
+       - Booking-h3
+       - Name-phone
+       - Field
+       - Booking-questions
+       - Booking-terms
+       - Booking-btn
+       - Booking-a
+       */
+
+.Booking {
+    width: 100%;
+    padding: 3rem;
+    border: 5px solid var(--c-primary);
+    border-radius: 2rem;
+}
+
+
+.Booking-h3 {
+    padding: 0 0 1rem;
+    margin: 0 0 1rem;
+}
+
+/* Inputs de nombre y móvil */
+.Name-phone {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 1rem 0;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+.Field {
+    /* Para que los inputs de nombre y móvil se adapten proporcionalmente */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 1rem 0;
+}
+
+input,
+textarea {
+    border: solid 2px var(--c-secundary);
+    padding: .5rem;
+    border-radius: 1rem;
+}
+
+
+.Booking-questions {
+    margin: 2rem 0;
+}
+
+.Booking-terms {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5rem;
+
+    margin: 1rem 0;
+}
+
+
+.Booking-terms input[type="checkbox"] {
+    /* para que el checkbox se ponga al lado del texto, ya que aparecía a la derecha y muy separado */
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: 0;
+}
+
+.Booking-terms label {
+    margin: 0;
+}
+
+.Booking-btn {
+    width: 100px;
+    padding: 1rem 3.5rem;
+    margin: 2rem 0 0;
+
+    border-radius: 1rem;
+    background-color: var(--c-primary);
+    transition: background-color .5s;
+}
+
+.Booking-a {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Booking-btn:hover {
+    background-color: rgba(255, 207, 131, 0.57);
+    color: var(--c-secundary);
+}
+
+/* Animation scroll, para que cuando se haga scroll aparezcan algunos elementos */
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Inicio Footer (pie de página)
+    Estructura:
+       - Footer
+       - Footer-flex
+       - Footer-logo
+       - Footer-column
+       - Footer-row
+       - Privacy-a
+       - Social-ul
+       - Social-a
+       */
+
+.Footer {
+    width: 100%;
+    margin: 1rem 0 auto;
+    background-color: var(--c-primary);
+}
+
+.Footer-flex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem 0 3rem 0;
+    gap: 4rem;
+}
+
+
+.Footer-logo {
+    width: 300px
+}
+
+.Footer-column {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    gap: 1rem;
+}
+
+
+.Footer-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 3rem;
+    padding: 2rem 0;
+
+    position: relative;
+}
+
+.Footer-row::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.5px;
+    width: 100%;
+    background-color: var(--c-secundary);
+}
+
+
+
+.Privacy-a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: var(--c-secundary);
+    margin: .4rem 0 0;
+    transition: width .5s ease;
+}
+
+.Privacy-a:hover::after {
+    width: 100%;
+}
+
+
+.Social-ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+}
+
+
+.Social-a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: var(--c-secundary);
+    margin: .4rem 0 0;
+    transition: width .5s ease;
+}
+
+.Social-a:hover::after {
+    width: 100%;
+}
+
+
+/* Media queries */
+
+@media (min-width: 1201px) {
+
+    .Header-menu,
+    .Header-close {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    /* Menu */
+
+    .Header-nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--c-bg);
+        padding: 3rem 3.5rem 4rem;
+        border-radius: 2rem;
+
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1rem;
+
+        display: none;
+
+    }
+
+    .Header-nav.isActive {
+        display: flex;
+    }
+
+    .Header-menu,
+    .Header-close {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+
+    .Header-ul {
+        flex-direction: column;
+        align-items: flex-end;
+
+    }
+
+    /* fin menu */
+
+    /* Artistas */
+
+    .Artists-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* el lugar y cómo llegar */
+
+    .Place-illustr {
+        top: 85%;
+    }
+
+    .Place-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .Place-illustr {
+        top: 90%;
+        left: 60%;
+        width: 15%;
+    }
+
+    .Location-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .Location-illustr {
+        top: 90%;
+        left: 80%;
+    }
+
+}
+
+
+@media (max-width:768px) {
+
+    /* Sobre el evento */
+    .About-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .Img-fly {
+        left: -20%;
+    }
+
+    .Img-ladybug {
+        left: -20%;
+    }
+
+    /* fin Sobre el evento */
+
+    /* para que el carrousel en vez de enseñar 3 fotos, en responsive enseñe 2 */
+    .Projects-carrousel {
+        /*realizado con IA*/
+        width: 300%;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        transition: all 1s ease;
+        gap: 1rem;
+    }
+
+    .Projects-img {
+        /*realizado con IA*/
+        width: 100%;
+        object-fit: cover;
+        border-radius: 2rem;
+    }
+
+
+    /* Footer */
+    .Footer-flex {
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        margin-left: 3rem;
+    }
+
+    .Footer-row {
+        flex-flow: column;
+        align-items: flex-start;
+        margin-left: 3rem;
+    }
+
+}
+
+
+@media (max-width:600px) {
+    .Projects-carrousel {
+        /*realizado con IA*/
+        width: 300%;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .Name-phone {
+        flex-flow: column nowrap;
+        align-items: flex-start;
+    }
+}
