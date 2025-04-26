@@ -16,9 +16,383 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tierra - Cerámica en la naturaleza</title>
 
-    <link rel="stylesheet" href="css/index.css">
-    <script src="js/index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
 
 </head>
 
 <body>
+
+    <!-- Encabezado (Header) -->
+
+    <header class="Header">
+        <div class="wrapper Header-wrapper">
+
+
+            <h1 class="Header-h1">
+                <a href="" class="Header-a">
+                    <img src="assets/img/header-vector.svg" alt="Tierra logo" class="Header-logo">
+                </a>
+            </h1>
+
+            <div class="Header-btn">
+                <button class="Header-menu" id="Open">☰</button>
+                <button class="Header-close" id="Close" style="display: none;">✕</button>
+            </div>
+
+            <nav class="Header-nav" id="Nav">
+
+                <ul class="Header-ul">
+                    <li class="Header-li">
+                        <a href="#evento" class="Header-link">Sobre el evento</a>
+                    </li>
+                    <li class="Header-li">
+                        <a href="#lugar" class="Header-link">El lugar</a>
+                    </li>
+                    <li class="Header-li">
+                        <a href="#reservas" class="Header-link">Reservas</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Fin del encabezado (Header) -->
+
+    <!-- Incio Pancarta (Banner) -->
+
+    <main class="main">
+        <section class="main-row Banner">
+            <h2 class="Banner-h2">
+                <img src="assets/img/logo-vector.svg" alt="Tierra" class="Banner-logo">
+            </h2>
+            <div class="Banner-color"></div>
+        </section>
+
+        <!-- Marquesina de decoración -->
+        <div class="Banner-marquee">
+            <div class="Marquee-slide" aria-hidden="true">
+                <img src="assets/img/star-vector.svg" alt="" class="Marquee-img">
+                <img src="assets/img/star-vector.svg" alt="" class="Marquee-img">
+                <img src="assets/img/star-vector.svg" alt="" class="Marquee-img">
+                <img src="assets/img/star-vector.svg" alt="" class="Marquee-img">
+                <img src="assets/img/star-vector.svg" alt="" class="Marquee-img">
+                <img src="assets/img/star-vector.svg" alt="" class="Marquee-img">
+                <img src="assets/img/star-vector.svg" alt="" class="Marquee-img">
+                <img src="assets/img/star-vector.svg" alt="" class="Marquee-img">
+                <img src="assets/img/star-vector.svg" alt="" class="Marquee-img">
+                <img src="assets/img/star-vector.svg" alt="" class="Marquee-img">
+
+            </div>
+        </div>
+
+        <!-- Fin de pancarta (Banner) -->
+
+        <!-- Contenido principal -->
+
+        <!-- Inicio "Sobre el evento" (About)
+         Descripción: En esta sección se describe de lo que trata el evento -->
+
+        <section id="evento" class="main-row About">
+            <div class="wrapper About-wrapper">
+                <h3 class="About-h3">Sobre el evento</h3>
+                <div class="About-grid">
+                    <div class="About-info">
+                        <p>Tierra es una experiencia creativa al aire libre donde la cerámica, las manos y el paisaje se
+                            encuentran.</p>
+                        <p>Durante los días 14 y 15 de junio, nos alejaremos del ritmo urbano para conectar con lo
+                            esencial: el barro, el
+                            tiempo lento y el entorno natural que nos rodea. Trabajaremos con la cerámica de manera
+                            consciente, combinando técnicas tradicionales con una mirada contemporánea y experimental.
+                        </p>
+                        <p>Gracias al espacio natural recolectaremos materiales y nos dejaremos inspirar por la textura
+                            de
+                            las piedras, el ritmo del viento y los silencios compartidos.</p>
+                        <p>Es un espacio abierto a todos los niveles, donde lo importante no es la técnica perfecta,
+                            sino
+                            el proceso y la exploración.</p>
+                        <p>Ven a modelar con calma, a crear con intención y a vivir la cerámica desde otro lugar.</p>
+                        <p>¿Te quedan dudas?</p>
+
+                        <a href="" class="About-button hidden">¡Pregúntanos!</a>
+                    </div>
+
+                    <!-- Imágenes decorativas -->
+                    <div class="About-images hidden">
+
+                        <picture>
+                            <source srcset="assets/img/tazas-pequeño.jpg" media="(max-width: 480px)">
+                            <source srcset="assets/img/tazas-mediano.jpg" media="(max-width: 600px)">
+
+                            <img src="assets/img/tazas-grande.jpg" alt="Tazas de ceramica sobre una mesa"
+                                class="About-img" loading="lazy">
+                        </picture>
+
+                        <img src="assets/img/bicho-alas.png" alt="" class="About-illustration Img-fly" loading="lazy">
+                        <img src="assets/img/mariposa.png" alt="" class="About-illustration Img-butterfly"
+                            loading="lazy">
+                        <img src="assets/img/mariquita.png" alt="" class="About-illustration Img-ladybug"
+                            loading="lazy">
+                        <img src="assets/img/bicho.png" alt="" class="About-illustration Img-bug" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- sub-sección "Artistas" 
+             Descripción: Se cuenta sobre las artistas que van a participar -->
+
+            <section class="Artists">
+                <h4 class="Artists-h4">Artistas</h4>
+
+                <div class="Artists-grid">
+                    <!-- artista izquierda -->
+                    <div class="Artist-left">
+                        <h5 class="Artist-h5">Clara Hernández</h5>
+                        <p>Clara es ceramista y formadora, especializada en técnicas tradicionales y cocción
+                            experimental al aire libre. Estudió Cerámica Artística en la Escuela de Arte de Sevilla y ha
+                            complementado su formación con residencias y talleres en España y Portugal, explorando la
+                            conexión entre la tierra, el fuego y el gesto manual.</p>
+                        <p>Su enfoque combina el respeto por los procesos lentos con la libertad creativa, y en sus
+                            talleres apuesta por una cerámica viva, consciente y en diálogo con el entorno. Actualmente
+                            compagina su práctica personal con la enseñanza en proyectos de arte y naturaleza.
+                        </p>
+                    </div>
+
+                    <!-- Ilustracción decorativa -->
+                    <div class="Star">
+                        <img src="assets/img/star-orange-vector.svg" alt="" class="Star-img hidden">
+                    </div>
+
+                    <!-- Artista derecha -->
+                    <div class="Artist-right">
+                        <h5 class="Artist-h5">Marina Plaza</h5>
+                        <p>Marina es ceramista autodidacta con formación en arte contemporáneo y educación ambiental. Su
+                            trabajo
+                            nace del cruce entre la creación artística y el vínculo con el paisaje, inspirada en su
+                            estancia en México. Desde hace varios
+                            años desarrolla talleres de cerámica en espacios naturales, donde invita a reconectar con
+                            los materiales, el cuerpo y el juego.</p>
+
+                        <p>Apasionada por las técnicas primitivas de cocción y por la cerámica como herramienta
+                            pedagógica, Marina ha colaborado con centros culturales, escuelas rurales y proyectos
+                            comunitarios, siempre desde una mirada cercana, accesible y sostenible.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- sub-sección "Proyectos"
+             Descripción: esto es una galería con imágenes de proyectos y procesos hechos en el evento -->
+
+            <section class="Projects">
+                <h4 class="Projects-h4">Proyectos</h4>
+                <div class="wrapper Projects-wrapper">
+
+                    <!-- Galería de imágenes (carrousel) -->
+                    <div class="Projects-carrousel hidden">
+
+                        <picture>
+                            <source srcset="assets/img/manosbarro-pequeño.jpg" media="(max-width: 480px)">
+                            <source srcset="assets/img/manosbarro-mediano.jpg" media="(max-width: 600px)">
+
+                            <img src="assets/img/manosbarro.jpg" alt="Manos cortando barro con tanza de alambre"
+                                class="Projects-img" loading="lazy">
+                        </picture>
+
+                        <picture>
+                            <source srcset="assets/img/jarron-pequeño.jpg" media="(max-width: 480px)">
+                            <source srcset="assets/img/jarron-mediano.jpg" media="(max-width: 600px)">
+
+                            <img src="assets/img/jarron-grande.jpg" alt="Jarron de cerámica azul" class="Projects-img"
+                                loading="lazy">
+                        </picture>
+
+                        <picture>
+                            <source srcset="assets/img/estanteriaceramica-pequeño.jpg" media="(max-width: 480px)">
+                            <source srcset="assets/img/estanteriaceramica-mediano.jpg" media="(max-width: 600px)">
+
+                            <img src="assets/img/estanteriaceramica.jpg"
+                                alt="Estantería con piezas de cerámica y plantas" class="Projects-img">
+                        </picture>
+
+                        <picture>
+                            <source srcset="assets/img/jarronflores-pequeño.jpg" media="(max-width: 480px)">
+                            <source srcset="assets/img/jarronflores-mediano.jpg" media="(max-width: 600px)">
+
+                            <img src="assets/img/jarronflores.jpg" alt="Jarrón de cerámica con flores"
+                                class="Projects-img" loading="lazy">
+                        </picture>
+
+                        <picture>
+                            <source srcset="assets/img/fuegocampo-pequeño.jpg" media="(max-width: 480px)">
+                            <source srcset="assets/img/fuegocampo-mediano.jpg" media="(max-width: 600px)">
+
+                            <img src="assets/img/fuegocampo-grande.jpg" alt="Campo con un fuego y piezas de cerámica"
+                                class="Projects-img" loading="lazy">
+                        </picture>
+
+                        <picture>
+                            <source srcset="assets/img/portavelas-pequeño.jpg" media="(max-width: 480px)">
+                            <source srcset="assets/img/portavelas-mediano.jpg" media="(max-width: 600px)">
+
+                            <img src="assets/img/portavelas.jpg" alt="Portavelas de cerámica" class="Projects-img"
+                                loading="lazy">
+                        </picture>
+
+                    </div>
+                </div>
+
+                <button class="Carrousel-arrow Siguiente">&#129034;</button>
+                <button class="Carrousel-arrow Anterior">&#129032;</button>
+            </section>
+        </section>
+
+        <!-- Fin de "Sobre el evento" (About) -->
+
+
+        <!-- Inicio "El lugar" (Place and location)
+         Descripción: aquí se informa sobre el sitio donde se hará el evento y se explica cómo llegar a este  -->
+
+        <section id="lugar" class="main-row Place">
+            <div class="wrapper Place-wrapper">
+                <h3 class="Place-h3">El lugar</h3>
+                <div class="Place-grid">
+                    <video poster class="Place-video hidden" src="assets/video/video-rio.mp4" controls muted
+                        loop autoplay playsinline></video>
+                    <div class="Place-info">
+                        <p class="Place-p">El evento se realizará en Cazalla de la Sierra, en Sevilla, donde
+                            disfrutaremos de nuestro taller y sus alrededores. Nuestro taller estará rodeado de verde,
+                            pero a solo unos pasos del pueblo para tener lo necesario a mano.
+                        </p>
+                        <img src="assets/img/star-vector-place.svg" class="Place-illustr hidden" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sub-sección "Cómo llegar" -->
+
+            <section class="Location">
+                <h4 class="Location-h4">Cómo llegar</h4>
+                <div class="Location-grid">
+                    <div class="Location-info">
+                        <p>Si vienes desde Sevilla tienes varias opciones:
+                        </p>
+                        <p class="Location-p">🚗 En coche</p>
+                        <p>&#8226; Desde Sevilla, toma la A-66 dirección Mérida.</p>
+                        <p>&#8226; Sal en El Ronquillo y sigue por la A-5301 hacia Cazalla de la Sierra.</p>
+
+                        <p class="Location-p">🚆 En tren (Cercanías)</p>
+                        <p>&#8226; Línea C-1 de Renfe Cercanías.</p>
+                        <p>&#8226; Salen desde Sevilla-Santa Justa o San Bernardo y te dejan en la estación
+                            Cazalla-Constantina.</p>
+
+                        <p>Si vienes desde otro sitio o vienes sin coche, avísanos y te echamos un
+                            cable para coordinar
+                            transporte o compartir trayecto con otras personas del evento 🚐✨
+                        </p>
+
+                        <img src="assets/img/star-vector-location.svg" class="Location-illustr hidden" alt="">
+
+                        <!-- Mapa de dónde se hará el evento -->
+                    </div>
+                    <iframe class="Location-map" width="425" height="350"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-5.770397186279298%2C37.92605516220723%2C-5.749197006225587%2C37.9376146511248&amp;layer=mapnik&amp;marker=37.93183513386643%2C-5.759797096252441"></iframe><small>
+                        <a href="https://www.openstreetmap.org/?mlat=37.93184&amp;mlon=-5.75980#map=16/37.93184/-5.75980"
+                            target="_blank" rel="noopener noreferrer" loading="lazy">
+                            Ver mapa en OpenStreetMap
+                        </a>
+                    </small>
+                </div>
+            </section>
+            <!-- Fin "El lugar" -->
+
+
+            <!-- Inicio "Reservas" -->
+            <section id="reservas" class="main-row Booking">
+                <div class="wrapper Booking-wrapper">
+                    <h3 class="Booking-h3">Reservas</h3>
+                    <p>Escríbenos tus datos y te mandaremos un email con toda la información.</p>
+
+                    <!-- Formulario para reservar plaza para el evento -->
+                    <div class="Name-phone">
+                        <div class="Field">
+                            <label for="nombre">Nombre *</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="introduce tu nombre">
+                        </div>
+
+                        <div class="Field">
+                            <label for="movil">Móvil *</label>
+                            <input type="text" name="movil" id="movil" placeholder="+000000000">
+                        </div>
+
+                    </div>
+                    <div class="Booking-email">
+                        <label for="email">Correo electrónico *</label>
+                        <input type="text" name="email" id="email" placeholder="email@...">
+                    </div>
+
+                    <div class="Booking-questions">
+                        <label for="questions">Observaciones y/o preguntas</label>
+                        <textarea placeholder="..." name="questions" id="questions"></textarea>
+
+                    </div>
+
+                    <!-- Aceptar Política de Privacidad -->
+                    <div class="Booking-terms">
+                        <input type="checkbox" name="acepto" id="acepto">
+                        <label for="acepto">He leído y acepto la Política de Privacidad *</label>
+                    </div>
+
+                    <div class="Booking-btn">
+                        <a href="" class="Booking-a">Enviar</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Fin "Reservas" -->
+        </section>
+    </main>
+
+    <!-- Fin contenido principal -->
+
+    <!-- Inicio pie de página -->
+    <footer class="Footer">
+        <div class="wrapper Footer-wrapper">
+            <div class="Footer-flex">
+                <div class="Footer-logo-container">
+                    <img src="assets/img/header-vector.svg" class="Footer-logo" alt="Logo de Evento Tierra">
+                </div>
+
+                <div class="Footer-column">
+                    <h5 class="Footer-h5">Contacto:</h5>
+                    <ul class="Footer-contact">
+                        <li class="Footer-li">eventotierra@gmail.com</li>
+                        <li class="Footer-li">+34 678 940 112</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="Footer-row">
+            <div class="Privacy">
+                <a href="" class="Privacy-a">Política de protección de datos</a>
+            </div>
+            <ul class="Social-ul">
+                <li class="Social-li">
+                    <a href="" class="Social-a">Instagram</a>
+                </li>
+                <li class="Social-li">
+                    <a href="" class="Social-a">Pinterest</a>
+                </li>
+                <li class="Social-li">
+                    <a href="" class="Social-a">Behance</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Fin pie de página -->
+
+</body>
+
+</html>
