@@ -296,15 +296,23 @@
                         <img src="assets/img/star-vector-location.svg" class="Location-illustr hidden" alt="">
 
                         <!-- Mapa de dónde se hará el evento -->
-                    </div>
-                    <iframe class="Location-map" width="425" height="350"
-                        src="https://www.openstreetmap.org/export/embed.html?bbox=-5.770397186279298%2C37.92605516220723%2C-5.749197006225587%2C37.9376146511248&amp;layer=mapnik&amp;marker=37.93183513386643%2C-5.759797096252441"></iframe><small>
-                        <a href="https://www.openstreetmap.org/?mlat=37.93184&amp;mlon=-5.75980#map=16/37.93184/-5.75980"
-                            target="_blank" rel="noopener noreferrer">
-                            Ver mapa en OpenStreetMap
-                        </a>
-                    </small>
-                </div>
+<p>
+                            <a href="https://www.openstreetmap.org/?mlat=37.93184&amp;mlon=-5.75980#map=16/37.93184/-5.75980" 
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                               Ver mapa en OpenStreetMap
+                            </a>
+                          </p>
+                        </div>
+
+                        <div class="Location-map-container">
+                            <div class="loading-message">Cargando mapa...</div>
+
+                            <iframe class="Location-map" width="425" height="350"
+                                src="https://www.openstreetmap.org/export/embed.html?bbox=-5.770397186279298%2C37.92605516220723%2C-5.749197006225587%2C37.9376146511248&amp;layer=mapnik&amp;marker=37.93183513386643%2C-5.759797096252441"
+                                allowfullscreen loading="lazy">
+                            </iframe>
+                        </div>
             </section>
             <!-- Fin "El lugar" -->
 
