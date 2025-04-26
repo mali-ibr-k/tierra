@@ -21,14 +21,14 @@ index.css
 
 @font-face {
     font-family: 'Krona One';
-    src: url('/tierra/assets/fonts/KronaOne-Regular.ttf') format('truetype');
+    src: url('assets/fonts/KronaOne-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Outfit';
-    src: url('../assets/fonts/Outfit-VariableFont_wght.ttf') format('truetype');
+    src: url('/assets/fonts/Outfit-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -225,7 +225,7 @@ button {
     height: 100vh;
     width: 100%;
 
-    background-image: url('/tierra/assets/img/banner-imagen-peq.jpg');
+    background-image: url('assets/img/banner-imagen-peq.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
