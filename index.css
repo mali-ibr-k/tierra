@@ -230,6 +230,11 @@ button {
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
+
+  /*realizado con IA, para que la imagen del Banner no pixelee en versión móvil*/
+    image-rendering: -webkit-optimize-contrast;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 /* Para que la imagen del banner tenga el tono naranja */
@@ -1021,6 +1026,12 @@ textarea {
         flex-flow: column;
         align-items: flex-start;
         margin-left: 3rem;
+    }
+
+  
+    .Banner {
+        /* realizado con IA, para que la imagen del Banner no pixelee en versión móvil */
+        background-attachment: scroll;
     }
 
 }
