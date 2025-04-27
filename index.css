@@ -225,13 +225,22 @@ button {
     height: 100vh;
     width: 100%;
 
-    background-image: url('assets/img/banner-imagen-peq.jpg');
+    overflow: hidden;
+}
+
+/* realizado con IA, para que el fondo del banner no pixelee en versión móvil */
+.Banner::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/img/banner-imagen-peq.jpg);
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: center center;
     background-size: cover;
+    z-index: -1;
 
-  /*realizado con IA, para que la imagen del Banner no pixelee en versión móvil*/
     image-rendering: -webkit-optimize-contrast;
     backface-visibility: hidden;
     transform: translateZ(0);
@@ -1027,13 +1036,6 @@ textarea {
         align-items: flex-start;
         margin-left: 3rem;
     }
-
-  
-    .Banner {
-        /* realizado con IA, para que la imagen del Banner no pixelee en versión móvil */
-        background-attachment: scroll;
-    }
-
 }
 
 
